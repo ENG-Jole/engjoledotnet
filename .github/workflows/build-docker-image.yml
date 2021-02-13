@@ -30,11 +30,6 @@ jobs:
 
       - name:            Build the Docker image
         run:             docker build . --file docker/Dockerfile --tag $IMAGE_NAME
-  publish:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v2
 
       - name: Log into registry
         run: echo "${{ secrets.DO_TOKEN }}" | docker login registry.digitalocean.com/engjoledotnet -u ${{ secrets.DO_USER }} --password-stdin
