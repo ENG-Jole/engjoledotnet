@@ -1,3 +1,70 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "http://www.engjole.net"
+title = "Enny Jole"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  author = "Enny Jole"
+  info = "Your Friendly Neighborhood DevOps Engineer"
+  description = "Enny Jole's personal website"
+  keywords = "blog,developer,personal"
+  #avatarurl = "images/avatar.png"
+  #gravatar = "john.doe@example.com"
+
+  #favicon_32 = "images/favicon-32x32.png"
+  #favicon_16 = "/img/favicon-16x16.png"
+
+  #footercontent = "Enter a text here."
+  #hideFooter = false
+  #hideCredits = false
+  hideCopyright = false
+  since = 2021
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  enableRobotsTXT = true
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/eng-jole/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin-square fa-2x"
+  weight = 2
+  url = "https://www.linkedin.com/in/enny-jole/"
+
+# Menu links
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url  = "about/"
+[[menu.main]]
+  name = "Resume"
+  weight = 2
+  url = "resume/"
+[[menu.main]]
+  name = "Blog"
+  weight = 3
+  url = "posts/"
+[[menu.main]]
+  name = "Contact"
+  weight = 4
+  url = "contact/"
