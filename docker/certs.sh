@@ -21,7 +21,7 @@
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE. 
+# SOFTWARE.
 
 
 if ! [ -x "$(command -v docker-compose)" ]; then
@@ -31,7 +31,7 @@ fi
 
 domains=(${DOMAIN1} ${DOMAIN2})
 rsa_key_size=4096
-data_path="./data/certbot"
+data_path="./certbot"
 email="${CERT_EMAIL}" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
