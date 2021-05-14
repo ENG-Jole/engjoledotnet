@@ -1,6 +1,6 @@
 +++
 draft = false
-date = 2021-05-14
+date = 2021-05-14T00:10:00-07:00
 title = "Google FooBar in 2021, A DevOps Perspective: GFB Pt 1"
 description = "Google FooBar Part 1"
 slug = "How I Stopped Worrying and Learned to Love the Code Challenge"

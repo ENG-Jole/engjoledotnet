@@ -1,6 +1,6 @@
 +++
 draft = false
-date = 2021-05-14
+date = 2021-05-14T00:30:00-07:00
 title = "Turns Out I Know A Lot About Primes Now: GFB Pt 2"
 description = "Google FooBar Part 2"
 slug = "Wow How Many Times Can I Say Smarandache-Wellin Number?"
