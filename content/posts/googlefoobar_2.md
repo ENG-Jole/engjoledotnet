@@ -12,7 +12,7 @@ series = ["Google FooBar 2021"]
 +++
 # Introduction
 
-This is Part 2 in a [series](https://engjole.net/categories/foobar) about my experience with the Google FooBar challenge. Read the rest here, and if you don't want challenge spoilers, don't read on!
+This is Part 2 in a [series](https://engjole.net/categories/foobar) about my experience with the Google FooBar challenge. Read the rest there, and if you don't want challenge spoilers, don't read on!
 
 # 7 Days to Do Stuff With Primes
 
