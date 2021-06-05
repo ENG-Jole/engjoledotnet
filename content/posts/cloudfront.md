@@ -1,6 +1,6 @@
 +++
 draft = false
-date = 2021-06-04T22:30:00-08:00
+date = 2021-06-04T22:30:00-07:00
 title = "I Once Again Moved My Website"
 description = "Going fast and smooth"
 slug = "Moving to Hugo on S3"
@@ -51,4 +51,4 @@ Old:
 
 The averages say it all: CloudFront is 7x faster than my old DO server, as one would hope and think 😉.
 
-I think I've held onto doing websites on VPSes for so long because of the old-school ops feeling of nostalgia it brings, and I think my DO fleet will still have a place in my personal infrastructure. But for this site at least, CloudFront is going to rule for a good long while. 
+I think I've held onto doing websites on VPSes for so long because of the old-school ops feeling of nostalgia it brings, and I think my DO fleet will still have a place in my personal infrastructure. But for this site at least, CloudFront is going to rule for a good long while.
