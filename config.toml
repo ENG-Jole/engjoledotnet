@@ -14,6 +14,7 @@ pygmentscodefencesguesssyntax = true
   author = "Enny Jole"
   info = "Your Friendly Neighborhood DevOps Engineer"
   description = "Enny Jole's personal website"
+  GitHubUser = "ENG-Jole"
   keywords = "blog,developer,personal"
   #avatarurl = "images/avatar.png"
   #gravatar = "john.doe@example.com"
@@ -68,3 +69,16 @@ pygmentscodefencesguesssyntax = true
   name = "Contact"
   weight = 4
   url = "contact/"
+
+[deployment]
+
+[[deployment.targets]]
+  name = "s3"
+  URL = "s3://engjoledotnet?region=us-west-2"
+  cloudFrontDistributionID = "E2UX9D7YQLG7KX"
+
+[[deployment.matchers]]
+  # Set custom content type for /sitemap.xml
+  pattern = "^sitemap\\.xml$"
+  contentType = "application/xml"
+  gzip = true

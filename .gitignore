@@ -1,3 +1,4 @@
 /public
 /infra
 .DS_Store
+.env
