@@ -36,6 +36,6 @@ jobs:
         run: |
           S3_BUCKET=${{ secrets.S3_BUCKET }}
           CLOUDFRONT_ID=${{ secrets.CLOUDFRONT_ID }}
-          sed -i "s/S3_BUCKET/${S3_BUCKET}/g" config.toml
-          sed -i "s/CLOUDFRONT_ID/${CLOUDFRONT_ID}/g" config.toml
+          sed -i "s|S3_BUCKET|${S3_BUCKET}|g" config.toml
+          sed -i "s|CLOUDFRONT_ID|${CLOUDFRONT_ID}|g" config.toml
           hugo deploy
