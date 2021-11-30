@@ -74,8 +74,8 @@ pygmentscodefencesguesssyntax = true
 
 [[deployment.targets]]
   name = "s3"
-  URL = "s3://engjoledotnet?region=us-west-2"
-  cloudFrontDistributionID = "E2UX9D7YQLG7KX"
+  URL = "S3_BUCKET"
+  cloudFrontDistributionID = "CLOUDFRONT_ID"
 
 [[deployment.matchers]]
   # Set custom content type for /sitemap.xml
