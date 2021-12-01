@@ -10,10 +10,12 @@ categories = ["blog", "meta"]
 externalLink = ""
 series = []
 +++
-# Oh Hey, I Have A Website
+## Oh Hey, I Have A Website
+
 And I don't update it. Whoops! Thanks for your patience, one (1) person who reads this.
 
-# Google FooBar is on Hiatus
+## Google FooBar is on Hiatus
+
 This one was probably easy to guess. I did complete the third challenge/second half of the second challenge/whatever you want to call it a while ago but was pretty unhappy with my results regardless. Eventually when I have some time I want to blog about my experience, redo it, and then eventually tackle the next one or two or three and see how far I get. I know _technically_ this is a hiring exercise despite not me _really_ wanting to work for the big G, but I have come to love the [Google SRE Book](https://sre.google/sre-book/table-of-contents/) and honestly wouldn't mind working on a big G SRE team? I am increasingly liking and practicing DS&A tricky dick questions more and more so hey, maybe a more SWE-SRE job is right for me?
 
 Speaking of SWE oriented DevOps...

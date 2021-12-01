@@ -90,3 +90,5 @@ And again, this passed sucessfully.
 ## Conclusion
 
 Overall I quite enjoyed my experience! I didn't ever feel stuck and I was able to knock it out over lunch. I know there's varying difficulty so I'm looking forward to some tricker ones, but I really do think these hit a nice space where you can have creative freedom and be fluent in the language you choose without needing to retake DS&A :)
+
+[All code in full is in GitHub](https://github.com/ENG-Jole/advent-of-code-2021)
