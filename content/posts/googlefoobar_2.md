@@ -10,15 +10,15 @@ categories = ["foobar", "blog", "coding"]
 externalLink = ""
 series = ["Google FooBar 2021"]
 +++
-# Introduction
+## Introduction
 
 This is Part 2 in a [series](https://engjole.net/categories/foobar) about my experience with the Google FooBar challenge. Read the rest there, and if you don't want challenge spoilers, don't read on!
 
-# 7 Days to Do Stuff With Primes
+## 7 Days to Do Stuff With Primes
 
 Reading some background on GFB, I found out that the first challenge used to be a lot shorter! For this challenge, I had seven days after receipt to write a function which takes in the starting index _i_ of a concatenated string of all primes, and returns the next five digits in the string! Previous first challenges were only 48 hours long, and for this challenge, I think 7 days is a fair period. While it seems deceptively easy at first, since you're just grabbing a index from a string than can be calculated, it is much much harder to do properly, since you must account for all positive values of _i_ less than or equal to 10,000!
 
-# Three Prime Approaches
+## Three Prime Approaches
 
 The way I saw, there were three approaches to this problem:
 
@@ -28,7 +28,7 @@ Second, you could take the index and generate a string of primes that is _only j
 
 Third, you could just exploit some property of primes to generate only the part of the string of primes that the index plus five was contained in. This also is a primes-on-demand approach, but is much much much more efficient, since no primes are "wasted" in your calculation. And this, dear reader, is the approach I immediately thought of.
 
-# The Prime-Counting Formula and Smarandache-Wellin Numbers
+## The Prime-Counting Formula and Smarandache-Wellin Numbers
 
 Having watched way too much Numberphile, I knew there was probably some property of primes I could use to arbitrarily calculate which nth prime would have what length. I decided I would treat the index not as an index, but as the _total length_ of an arbitrarily long string of primes. So if I could find out  how the string of primes grew as a function of the number of primes concatenated, I could then reverse this formula to give me the number of primes for a given length. After that I could just calculate a few more primes beyond that, and then get the five digits after the index by only calculating a few primes total, or by at least knowing when to stop calculating exactly.
 
@@ -36,7 +36,7 @@ I ended up at the ever-useful [Online Encyclopedia of Integer Sequences](https:/
 
 But, since SWNs are concatenated primes, their rate of growth is effected by the rate of growth of the length of prime numbers! I ended up eventually at a different OEIS entry, this time for _the sequence of the number of prime numbers with digits < m_, _m_ being the index of the sequence. This meant that from this series, I could determine how many digits the _nth_ prime would have, and then recursively calculate the total length of the _nth_ Smarandache-Wellin number! From there, I would just need to solve for the _nth_ SWN (which is also the _nth_ prime in the sequence) as a function of the total length!
 
-# Creating an Algorithm for the Length of a Smarandache-Wellin Number
+## Creating an Algorithm for the Length of a Smarandache-Wellin Number
 
 First, I ended up creating a specific version of a SWN length algorithm using the aformentioned _number of primes < m_ sequence as bounds for a piecewise function:
 
@@ -99,7 +99,7 @@ Much easier to see what's acutally going on here, and seems less arbitrary than 
 
 I did something similar to my optimized SWN algo to get the length of individual _nth_ primes. For all of these algos I stopped at the next mark past an index of 10,000 for my bounds.
 
-# Converting String Indexes into SWN Lengths
+## Converting String Indexes into SWN Lengths
 
 Something I noticed about my nth-as-a-function-of-length algo is that when I was passing indexes to it, not all indexes would return an integer value of _n_ when using a real calculator! Thanks Python floats and computer division! You obviously can't have the 2.5th prime, so I need to find some way to deal with that, since I was just going to pass raw index values to it, and somehow remember where the index was in relation to the valid length of the calculated _nth_ SWN.
 
@@ -134,7 +134,7 @@ The rest of the code was rather straightforward, some helper functions for the c
 
 You can see my final code [here](https://github.com/ENG-Jole/foobar.withgoogle/blob/main/re-id/solution.py)
 
-# Conclusion
+## Conclusion
 
 I ended up submitting my solution after working on it for four calendar days, but only spent maybe 2 full evenings after work working on it. I'm quite happy with my end result, especially since I had to write everything in Python 2.7! This meant no stdlib LRU caching, which I think could easily speed up the prime generation, especially during benchmarking for all accepted values of index.
 

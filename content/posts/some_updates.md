@@ -18,14 +18,18 @@ This one was probably easy to guess. I did complete the third challenge/second h
 
 Speaking of SWE oriented DevOps...
 
-# I Built An (Internal) Service
+## I Built An (Internal) Service
+
 For work, so I can't share in terrible detail, but! Yay! Fun times. It is almost entirely in Python and uses MongoDB for a backend. I really wish there was a better supported hosted MongoDB option in AWS. DocumentDB really doesn't cut it when it's available in only half the regions (and specifically not available in the region your service lives in) and as far as other KV stores go I don't think DynamoDB...is that great? Honestly it's weird to have to use boto3 to interact with the datastore. Like sure, I can just wrap it in a ODM or whatever but I don't want to _have_ to do that! (And my SRE brain associates boto3 with resource management more than anything else so it feels wrong...)
 
-# I Went to RustConf
+## I Went to RustConf
+
 And it was great! I think recorded talks + some form of live Q&A work great and everyone in the Rust community is so kind and welcoming. It's no secret I am a fan of Rust even though I do not write it on anywhere near a regular basis and the toolchain, developer experience, and community are a big reason why. Rust is definitely a hard language to learn; the borrow checker is a foreign concept to most people. But recognizing that and including everyone at every stage of their Rust journey in the community (and focusing hard on accessibility and inclusivity generally) is really really key.
 
-# I Am Going to Try to Blog More
+## I Am Going to Try to Blog More
+
 I have a few blog ideas rattling around my head that are more coding orinted, like writing Pythonic LeetCode-style answers and asking for permission instead of forgiveness in Python as well, in addition to maybe setting up a road warrior-style VS Code setup and some other futzy infra tooling. We'll see about the latter, but I defintely want to write about the two former things. I think maybe also an exploration of [mingrammer's digrams as code](https://diagrams.mingrammer.com) and [Brainboard](https://www.brainboard.co) would be cool too. I think architectural diagrams as code is something that's sorely missing in most Docs-As-Code CI/CD flows. I have no idea about a timeline for any of this and make no promises that this stuff will get done in a timely manner :).
 
-# I'm Getting Very Into Specialty Coffee
+## I'm Getting Very Into Specialty Coffee
+
 Maybe I'll blog about it? Who knows!

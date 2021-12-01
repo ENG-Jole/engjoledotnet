@@ -10,7 +10,7 @@ categories = ["meta", "blog"]
 externalLink = ""
 series = []
 +++
-# Moving to CloudFront and S3
+## Moving to CloudFront and S3
 
 Remember how I said the Docker container method wasn't the best way to run this site?
 
@@ -47,7 +47,6 @@ Old:
     --- engjole.net ping statistics ---
     5 packets transmitted, 5 packets received, 0.0% packet loss
     round-trip min/avg/max/stddev = 18.172/21.996/33.505/5.797 ms
-
 
 The averages say it all: CloudFront is 7x faster than my old DO server, as one would hope and think 😉.
 

@@ -10,7 +10,7 @@ categories = ["foobar", "blog", "coding"]
 externalLink = ""
 series = ["Google FooBar 2021"]
 +++
-# I Do DevOps
+## I Do DevOps
 
 So, to start off, I don't like LeetCode (like many people), code challenges, or code golf, mainly for two reasons.
 
@@ -22,7 +22,7 @@ I think the above is a good way to distinguish between _computer science_ and _s
 
 But this is all to say: I do DevOps, I don't do code challenges.
 
-# I'm Doing (Or Did) A Code Challenge
+## I'm Doing (Or Did) A Code Challenge
 
 So surprise surprise when I found myself getting _really_ into Google FooBar when I got invited the other day while doing research for a platform project I'm leading. It is, of course, not an everyday occurrence that one gets invited by the all-powerful Google, based on whatever fancy ML neural net they use to fingerprint browsers and find out who you are, to participate in [their famous maybe-recruiting tool, definite-fun time program](https://towardsdatascience.com/how-to-get-hired-by-google-b19806ad3c62). So, here I am.
 
