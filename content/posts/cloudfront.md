@@ -21,7 +21,7 @@ To do this, I created an S3 bucket and CloudFront distro, added the deploy info 
 I ran a ping test against the old Docker server and the CloudFront distro while I had both up:
 
 New:
-
+{{<highlight bash>}}
     ❯ ping -c 5 www.engjole.net
     PING doi5jqyokxnhv.cloudfront.net (54.192.73.49): 56 data bytes
     64 bytes from 54.192.73.49: icmp_seq=0 ttl=245 time=3.281 ms
@@ -33,9 +33,9 @@ New:
     --- doi5jqyokxnhv.cloudfront.net ping statistics ---
     5 packets transmitted, 5 packets received, 0.0% packet loss
     round-trip min/avg/max/stddev = 2.512/3.651/4.519/0.761 ms
-
+{{</highlight>}}
 Old:
-
+{{<highlight bash>}}
     ❯ ping -c 5 engjole.net
     PING engjole.net (167.99.97.195): 56 data bytes
     64 bytes from 167.99.97.195: icmp_seq=0 ttl=49 time=18.172 ms
@@ -47,7 +47,7 @@ Old:
     --- engjole.net ping statistics ---
     5 packets transmitted, 5 packets received, 0.0% packet loss
     round-trip min/avg/max/stddev = 18.172/21.996/33.505/5.797 ms
-
+{{</highlight>}}
 The averages say it all: CloudFront is 7x faster than my old DO server, as one would hope and think 😉.
 
 I think I've held onto doing websites on VPSes for so long because of the old-school ops feeling of nostalgia it brings, and I think my DO fleet will still have a place in my personal infrastructure. But for this site at least, CloudFront is going to rule for a good long while.

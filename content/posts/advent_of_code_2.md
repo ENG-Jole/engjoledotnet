@@ -28,50 +28,50 @@ Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\
 ### The Solution
 
 Again, I think we're better served by the example given by Advent of Code (which I'll reword slightly anyway), and not my gross, detached, formal-logic-style rewording of the problem:
+{{<highlight text>}}
+Given the following instructions:
 
-            Given the following instructions:
+forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2
 
-            forward 5
-            down 5
-            forward 8
-            up 3
-            down 8
-            forward 2
+You start from [0, 0]. The steps above would then modify your position as follows:
 
-            You start from [0, 0]. The steps above would then modify your position as follows:
+forward 5 adds 5 to your x, a total of 5.
+down 5 adds 5 to your y, resulting in a value of 5.
+forward 8 adds 8 to your x position, a total of 13.
+up 3 decreases your y by 3, resulting in a value of 2.
+down 8 adds 8 to your y, resulting in a value of 10.
+forward 2 adds 2 to your x, a total of 15.
 
-            forward 5 adds 5 to your x, a total of 5.
-            down 5 adds 5 to your y, resulting in a value of 5.
-            forward 8 adds 8 to your x position, a total of 13.
-            up 3 decreases your y by 3, resulting in a value of 2.
-            down 8 adds 8 to your y, resulting in a value of 10.
-            forward 2 adds 2 to your x, a total of 15.
-
-            After following these instructions, you would have a x of 15 and a y of 10. (Multiplying these together produces 150.)
-
+After following these instructions, you would have a x of 15 and a y of 10. (Multiplying these together produces 150.)
+{{</highlight>}}
 There we go! Much easier to understand. Thank god I'm not writing these problems, right? It'd require some moral philosophy background just to understand the first sentence.
 
 First part, as always, is turn the input webpage into something useful:
-
-            def get_input_data(url: str) -> list[str]:
-                return [item for item in requests.get(url, cookies={"session": SESSION_ID}).text.split("\n")]
-
+{{<highlight py>}}
+def get_input_data(url: str) -> list[str]:
+    return [item for item in requests.get(url, cookies={"session": SESSION_ID}).text.split("\n")]
+{{</highlight>}}
 Hey look at that, a one-liner! Aren't I clever. I go back and forth of whether I like naming list comps something understandable before returning them or if I just want to return the comp and let the function name do the semantic work (especially when it has type annotations). This time laziness won out  ¯\\_(ツ)_/¯.
 
 This is once again a fairly straighforward problem. You just need to track the _x_ and _y_ position somehow, and have a case/match/if-else if check for each word and deconstruct each line. I could probably have done this with the new structural pattern matching syntax in Python 3.10 but I couldn't be assed that much. Again, laziness won out.
+{{<highlight py>}}
+def get_horizontal_and_vertical_position(command_list: list[str]) -> list[int]:
+    final_position = [0, 0]
+    for command in command_list:
+            if command.startswith("down"):
+                final_position[1] += int(command[-1])
+            elif command.startswith("up"):
+                final_position[1] -= int(command[-1])
+            elif command.startswith("forward"):
+                final_position[0] += int(command[-1])
 
-            def get_horizontal_and_vertical_position(command_list: list[str]) -> list[int]:
-                final_position = [0, 0]
-                for command in command_list:
-                        if command.startswith("down"):
-                            final_position[1] += int(command[-1])
-                        elif command.startswith("up"):
-                            final_position[1] -= int(command[-1])
-                        elif command.startswith("forward"):
-                            final_position[0] += int(command[-1])
-
-                return final_position
-
+    return final_position
+{{</highlight>}}
 I probably should have set _x_ and _y_ to separate variables rather than operate on list elements the whole time. It would have been a little easier to read, especially since I could just create a list at function return with those values or even just return them as a tuple or even just do the multiplication step now instead of as an f-string during final output. That said, I feel like coupling them together like this reflects their relationship better, and returning the final position just felt cleaner to me; I'd rather write a little broader code that could theoretically be reused and then further manipulate the output rather than hyperspecific code that would have to get modified for a more general use case. Yeah, this is Advent of Code and I'll probably never use this code ever again, but _writing production-like code is always a good practice_.
 
 This passed sucessfully post-element multiplication.
@@ -83,20 +83,20 @@ Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\
 ### The Solution, Part 2
 
 Again, pretty straightforward: just track _x_, _y_, and _z_ and do an if-check to match the conditions given:
+{{<highlight py>}}
+def get_hori_vert_and_aim(command_list: list[str]) -> list[int]:
+    final_position = [0,0,0]
+    for command in command_list:
+        if command.startswith("down"):
+            final_position[2] += int(command[-1])
+        elif command.startswith("up"):
+            final_position[2] -= int(command[-1])
+        elif command.startswith("forward"):
+            final_position[0] += int(command[-1])
+            final_position[1] += (int(command[-1]) * final_position[2])
 
-            def get_hori_vert_and_aim(command_list: list[str]) -> list[int]:
-                final_position = [0,0,0]
-                for command in command_list:
-                    if command.startswith("down"):
-                        final_position[2] += int(command[-1])
-                    elif command.startswith("up"):
-                        final_position[2] -= int(command[-1])
-                    elif command.startswith("forward"):
-                        final_position[0] += int(command[-1])
-                        final_position[1] += (int(command[-1]) * final_position[2])
-
-                return final_position
-
+    return final_position
+{{</highlight>}}
 Again, could have done a ```match``` instead. No biggie. I'm sure I could have also done this without the ```startswith``` syntax during the iteration and instead convert values in-place in the input list and then add them somehow to the final position. I do think loops like this are a little easier to read than some clever ```map``` stuff...but clever ```map``` stuff has its place.
 
 ## Conclusion

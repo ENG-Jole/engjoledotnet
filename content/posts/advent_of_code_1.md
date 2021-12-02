@@ -34,30 +34,29 @@ Given a list of ints, determine how many times the nth + 1 int is greater than t
 So ok, I'm lying slightly about the problem... you're not actually given a list of ints. Hell, you're not given anything other than a webpage! It is entirely up to you to grab the dataset and convert it into the format you need, which, ok, no big deal, let me just install requests real quick, grab that URL, convert it to text, split it into a list, map int to each elem and...realize I need a session cookie or auth token because the input is dynamically generated. Alright. Let's try this again.
 
 Given a webpage? Easy! Install requests, grab that url, put the session ID in my environment, grab that from the environment, pass it as a dict to requests.get, convert the results to a string, split that string, and list comp it so it's actually ints! Yay!
+{{<highlight py>}}
+SESSION_ID = os.environ["AOC_2021_SESSION"]
+URL = "https://adventofcode.com/2021/day/1/input"
 
-        SESSION_ID = os.environ["AOC_2021_SESSION"]
-        URL = "https://adventofcode.com/2021/day/1/input"
-
-
-        def url_to_list_of_ints(url: str) -> list[int]:
-            list_of_ints = [
-                int(item)
-                for item in requests.get(url, cookies={"session": SESSION_ID}).text.split()
-            ]
-            return list_of_ints
-
+def url_to_list_of_ints(url: str) -> list[int]:
+    list_of_ints = [
+        int(item)
+        for item in requests.get(url, cookies={"session": SESSION_ID}).text.split()
+    ]
+    return list_of_ints
+{{</highlight>}}
 There we go! An actual list of ints! What's next?
 
 So it's very obvious that we need to iterate over the list and do things with each value. Now, the tricky thing is is that a lot of the times you want to do something with an index of a list, you don't actually want to use ```for index in range(len(list))``` to iterate over the indexes themselves, since a lot of the times you're just immediately going to get the value for that index anyway... this is why you use ```for index, value in enumerate(list)``` instead if you need the "every nth value" or whatever. Or, if you are trying to iterate over two lists the same length and use the index as a placekeeper, you instead do something like ```for av, bv, in zip(list_a, list_b)``` instead. But this time, I actually DID need the index, since I was looking ahead for the value after the one I was on and doing an if check on the difference between the two values:
+{{<highlight py>}}
+def get_num_of_larger_measurements(measurements: list[int]) -> int:
+    larger_measurements = 0
+    for index in range(len(measurements) - 1):
+        if measurements[index + 1] - measurements[index] > 0:
+            larger_measurements += 1
 
-        def get_num_of_larger_measurements(measurements: list[int]) -> int:
-            larger_measurements = 0
-            for index in range(len(measurements) - 1):
-                if measurements[index + 1] - measurements[index] > 0:
-                    larger_measurements += 1
-
-            return larger_measurements
-
+    return larger_measurements
+{{</highlight>}}
 I was then just cumatively adding each greater than 0 difference to the psuedo-counter I set up. Worked out ok. I probably could have instead used some itertools trickery for the lookahead but I think this is generally more readable...and it's not like performance really matters! This passed sucessfully and....
 
 ### Wait, There's a Part 2????
@@ -67,30 +66,30 @@ Given a list of ints, get the number of times the nth + 1 sum of the three item 
 ### The Solution (Again)
 
 Well, despite being a little confusingly worded, this one isn't that bad at all. Looking at the example shows it a little better:
-
-        199  A      
-        200  A B    
-        208  A B C  
-        210    B C D
-        200  E   C D
-        207  E F   D
-        240  E F G  
-        269    F G H
-        260      G H
-        263        H
-
+{{<highlight text>}}
+199  A      
+200  A B    
+208  A B C  
+210    B C D
+200  E   C D
+207  E F   D
+240  E F G  
+269    F G H
+260      G H
+263        H
+{{</highlight>}}
 For each letter triad, sum the numbers together. Then, given the list of sums, determine how many times the nth + 1 sum is greater than the nth sum. So, all I needed to do was get the sliding scale sums and then run the same larger measurement function against that. Here comes our ugly friend ```for index in range(len(list))``` again:
+{{<highlight py>}}
+def get_sliding_scale_num_of_larger_measurements(measurements: list[int]) -> int:
+    sums = []
+    for index in range(len(measurements) - 2):
+        sums.append(
+            measurements[index] + measurements[index + 1] + measurements[index + 2]
+        )
 
-    def get_sliding_scale_num_of_larger_measurements(measurements: list[int]) -> int:
-        sums = []
-        for index in range(len(measurements) - 2):
-            sums.append(
-                measurements[index] + measurements[index + 1] + measurements[index + 2]
-            )
-
-        larger_measurements = get_num_of_larger_measurements(sums)
-        return larger_measurements
-
+    larger_measurements = get_num_of_larger_measurements(sums)
+    return larger_measurements
+{{</highlight>}}
 And again, this passed sucessfully.
 
 ## Conclusion

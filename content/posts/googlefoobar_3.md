@@ -39,17 +39,17 @@ This is largely because values for _Q(n)_ grow exponentially with _n_, as do the
 So instead I just iterated through all possible ranges in the list and stopped when the first range's sum was equal to the target value. And thanks to the enumerate function, I could iterate with the index and item at the same time, and just return the two indexes. And if the range was exhausted and there was no match, I'd just return the "no match" list.
 
 Here's what my code ended up looking like:
+{{<highlight py>}}
+def solution(input_list, target_value):
+    for start_key, start_value in enumerate(input_list):
+        for end_key, end_value in enumerate(input_list):
+            range = input_list[start_key:end_key + 1]
+            if sum(range) == target_value:
+                return [start_key, end_key]
 
-    def solution(input_list, target_value):
-      for start_key, start_value in enumerate(input_list):
-            for end_key, end_value in enumerate(input_list):
-                range = input_list[start_key:end_key + 1]
-                if sum(range) == target_value:
-                    return [start_key, end_key]
-
-        no_partition = [-1, -1]
-        return no_partition
-
+    no_partition = [-1, -1]
+    return no_partition
+{{</highlight>}}
 I try to avoid iteration whenever possible and just eliminate cases based on other criteria since iteration is typically costly but in this case there was absolutely no way around it without having code that took fifteen years to run through. Alas.
 
 You can see the full code with comments [here](https://github.com/ENG-Jole/foobar.withgoogle/blob/main/numbers-station-coded-messages/solution.py)

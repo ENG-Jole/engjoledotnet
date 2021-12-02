@@ -39,25 +39,25 @@ But, since SWNs are concatenated primes, their rate of growth is effected by the
 ## Creating an Algorithm for the Length of a Smarandache-Wellin Number
 
 First, I ended up creating a specific version of a SWN length algorithm using the aformentioned _number of primes < m_ sequence as bounds for a piecewise function:
-
-      # For the nth SWN, return the total number of digits
-      def swn_length(n):
-          if n == 0:
-              length = 0
-          elif 0 < n <= 4:
-              length = n
-          elif 4 < n <= 25:
-              length = 4 + 2 * (n - 4)
-          elif 25 < n <= 168:
-              length = 46 + 3 * (n - 25)
-          elif 168 < n <= 1229:
-              length = 475 + 4 * (n - 168)
-          elif 1229 < n <= 9592:
-              length = 4719 + 5 * (n - 1229)
-          else:
-              raise ValueError
-          return length
-
+{{<highlight py>}}
+# For the nth SWN, return the total number of digits
+def swn_length(n):
+    if n == 0:
+        length = 0
+    elif 0 < n <= 4:
+        length = n
+    elif 4 < n <= 25:
+        length = 4 + 2 * (n - 4)
+    elif 25 < n <= 168:
+        length = 46 + 3 * (n - 25)
+    elif 168 < n <= 1229:
+        length = 475 + 4 * (n - 168)
+    elif 1229 < n <= 9592:
+        length = 4719 + 5 * (n - 1229)
+    else:
+        raise ValueError
+    return length
+{{</highlight>}}
 This worked blazingly fast, since it was only doing simple math! However, I disliked the inelegance, and verbosity, so created a generalized formula for the length of an SWN:
 
 > For the nth SWN, given the set of number of primes P with at most m digits where m is the index of the set, the length is as follows:
@@ -65,37 +65,38 @@ This worked blazingly fast, since it was only doing simple math! However, I disl
 > L(n) = L(P[m-1]) + m(n - P[m-1])
 
 Beautiful! Seems much more functionally oriented. I went to work writing it in Python:
+{{<highlight py>}}
+# a006880 is the list of the number of primes < m
+def swn_length_iterative(n):
+    length = None
+    for index in range(0, len(a006880) - 1):
+        if n == 0:
+            length = 0
+        if a006880[index - 1] < n <= a006880[index]:
+            length = swn_length_iterative(a006880[index - 1]) + index * (n - a006880[index -1])
+            break
+        else:
+            continue
 
-      # a006880 is the list of the number of primes < m
-      def swn_length_iterative(n):
-         length = None
-         for index in range(0, len(a006880) - 1):
-             if n == 0:
-                 length = 0
-             if a006880[index - 1] < n <= a006880[index]:
-                 length = swn_length_iterative(a006880[index - 1]) + index * (n - a006880[index -1])
-                 break
-             else:
-                 continue
-
-         return length
-
+    return length
+{{</highlight>}}
 Much easier to see what's acutally going on here, and seems less arbitrary than a bunch of if thans and numbers. However, on comparing these two algorithms, since the latter was a for loop, and Python sucks sometimes, I realized my fancy generalized algo was 23 times slower than the hardcoded one, so hardcoded won out. Plus, it made it a lot easier to make a specific algo to get the _nth_ prime from the length:
-
-      def check_length(length):
-          if length == 0:
-              n = 0
-          elif 0 < length <= 4:
-              n = length
-          elif 4 < length <= 46:
-              n = (length + 4) / 2
-          elif 46 < length <= 475:
-              n = (length + 29) / 3
-          elif 475 < length <= 4719:
-              n = (length + 197) / 4
-          elif 4719 < length <= 46534:
-              n = (length + 1426) / 5
-          return n
+{{<highlight py>}}
+def check_length(length):
+    if length == 0:
+        n = 0
+    elif 0 < length <= 4:
+        n = length
+    elif 4 < length <= 46:
+        n = (length + 4) / 2
+    elif 46 < length <= 475:
+        n = (length + 29) / 3
+    elif 475 < length <= 4719:
+        n = (length + 197) / 4
+    elif 4719 < length <= 46534:
+        n = (length + 1426) / 5
+    return n
+{{</highlight>}}
 
 I did something similar to my optimized SWN algo to get the length of individual _nth_ primes. For all of these algos I stopped at the next mark past an index of 10,000 for my bounds.
 
@@ -104,30 +105,30 @@ I did something similar to my optimized SWN algo to get the length of individual
 Something I noticed about my nth-as-a-function-of-length algo is that when I was passing indexes to it, not all indexes would return an integer value of _n_ when using a real calculator! Thanks Python floats and computer division! You obviously can't have the 2.5th prime, so I need to find some way to deal with that, since I was just going to pass raw index values to it, and somehow remember where the index was in relation to the valid length of the calculated _nth_ SWN.
 
 I implemented a function to turn the index into a _possible nth prime_ value, checked to see if it was a valid _nth_ prime, and checked the delta from there. I ended up using a function I had written earlier to get the necessary amount of primes to get five digits after any index of the _nth_ prime to create a spread of _n_ values for possible candidates if the possible prime wasn't valid, and used a bisect-based comparison function to get the closest valid _n_ value. I then subtracted the raw string index value from SWN length of the closest _n_ value to get a delta from which I could base the five digits off of. This code ended up being a pain in the ass to get working properly; between certain lengths there was drift of one or two places as compared to the brute force result and I ended up calculating the length of the _nth_ prime and adding that value minus one to the delta to compensate for this drift. Here's what the final code looked like:  
+{{<highlight py>}}
+def nth_from_index(string_index):
+    poss_n = check_length(string_index)
+    if swn_length(poss_n) == string_index:
+        prime_start = poss_n
+        init_position = 0
+    else:
+        spread = get_neccessary_prime_amount(poss_n)
+        delta = int(ceil(spread / 2.0))
+        lower_bound = poss_n - delta
+        upper_bound = poss_n + delta + 1
+        prime_dict = {}
+        for m in range(lower_bound, upper_bound):
+            prime_dict[swn_length(m)] = m
+        prime_index = take_closest_rd(
+            sorted(list(prime_dict.keys())), string_index)
+        prime_start = prime_dict.get(prime_index)
+        init_position = string_index - prime_index
 
-      def nth_from_index(string_index):
-          poss_n = check_length(string_index)
-          if swn_length(poss_n) == string_index:
-              prime_start = poss_n
-              init_position = 0
-          else:
-              spread = get_neccessary_prime_amount(poss_n)
-              delta = int(ceil(spread / 2.0))
-              lower_bound = poss_n - delta
-              upper_bound = poss_n + delta + 1
-              prime_dict = {}
-              for m in range(lower_bound, upper_bound):
-                  prime_dict[swn_length(m)] = m
-              prime_index = take_closest_rd(
-                  sorted(list(prime_dict.keys())), string_index)
-              prime_start = prime_dict.get(prime_index)
-              init_position = string_index - prime_index
+    length = lenprime(poss_n)
+    position = init_position + length - 1
 
-          length = lenprime(poss_n)
-          position = init_position + length - 1
-
-          return prime_start, position
-
+    return prime_start, position
+{{</highlight>}}
 I think this could probably could have used some optimizing but I thought it was good enough and during my own testing worked for all expected values of the index.
 
 The rest of the code was rather straightforward, some helper functions for the creation of a concatenated list of primes, and some islice uses to chop up said list at the appropriate position. For prime generation I ended up using an unbounded sieve of Eratosthenes generator and just next'd and islice'd the _nth_ prime I needed. The main solution function took an index, got a nth prime and delta out of it from my nth_from_index function, got the next _x_ primes from the _nth_ prime, and then cat'd them all together and sliced out what it needed.
