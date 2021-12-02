@@ -13,7 +13,13 @@ series = ["Advent of Code 2021"]
 
 ## Wait, I Thought You Didn't Like Coding Challenges
 
-I mean...I don't, really. I am definitely not into competive programming or tricky dick algorithm optimization to get that .01% less CPU usage because somehow the standard library of the language, which is often about as fast as you're going to get if there's compiler optimization going on, is somehow not fast enough. (I guess this is mainly a Python complaint since the stdlib is mainly written in C and thus will forever be faster, but I don't see people doing LeetCode in Rust or C ;P)(But also, if you need REALLY performant Python code you're not going to beat a [JIT](https://www.pypy.org) or [Cython](https://cython.org), and is there even a use-case where you have to use highly optimized highly performant vanilla Python where you can't use  JIT'd Python or Go or Rust or Kotlin or C or any other more appropriate for the job programming language?)(I digress)
+I mean...I don't, really. I am definitely not into competive programming or tricky dick algorithm optimization to get that .01% less CPU usage because somehow the standard library of the language, which is often about as fast as you're going to get if there's compiler optimization going on, is somehow not fast enough. [^1] [^2] [^3]
+
+[^1]: I guess this is mainly a Python complaint since the stdlib is mainly written in C and thus will forever be faster, but I don't see people doing LeetCode in Rust or C 😉
+
+[^2]: But also, if you need REALLY performant Python code you're not going to beat a [JIT](https://www.pypy.org) or [Cython](https://cython.org), and is there even a use-case where you have to use highly optimized highly performant vanilla Python where you can't use  JIT'd Python or Go or Rust or Kotlin or C or any other more appropriate for the job programming language?
+
+[^3]: I digress
 
 But you're right, dear reader, I don't like LeetCode-style competive programming challenges. Advent of Code is definitely not that though! For one, they're all fairly short problems and don't require you to retake Data Structures and Algorithms to be good at them, and for two, they focus on _general programmatic problem solving_, the most important part of developing, rather than _hey what algorithm is this and implement it in the most optimal way possible_. This is to say: I rather like them! They're fun! They're puzzles! They scratch my itch for coding and don't require me to go on the OEIS every time! So I'm gonna (hopefully) do it this year, mmkay?
 
@@ -25,7 +31,7 @@ Given a list of ints, determine how many times the nth + 1 int is greater than t
 
 ### The Solution
 
-So ok, I'm lying slightly about the problem... you're not actually given a list of ints. Hell, you're not given anything other than a webpage! It is entirely up to you to grab the dataset and convert it into the format you need, which, ok, no big deal, let me just install requests real quick, grab that URL, convert it to text, split it into a list, map int to each elem and...realize I need a session cookie or auth token because the input is dynamically generated. Alright. Let's try rhis again.
+So ok, I'm lying slightly about the problem... you're not actually given a list of ints. Hell, you're not given anything other than a webpage! It is entirely up to you to grab the dataset and convert it into the format you need, which, ok, no big deal, let me just install requests real quick, grab that URL, convert it to text, split it into a list, map int to each elem and...realize I need a session cookie or auth token because the input is dynamically generated. Alright. Let's try this again.
 
 Given a webpage? Easy! Install requests, grab that url, put the session ID in my environment, grab that from the environment, pass it as a dict to requests.get, convert the results to a string, split that string, and list comp it so it's actually ints! Yay!
 
