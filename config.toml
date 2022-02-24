@@ -12,11 +12,11 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   author = "Enny Jole"
-  info = "Data Platform SRE @ Box"
+  info = "Data Platform SRE @ Box | she/her/hers"
   description = "Enny Jole's personal website"
   GitHubUser = "ENG-Jole"
   keywords = "blog,developer,personal"
-  #avatarurl = "images/avatar.png"
+  avatarurl = "images/avatar.jpg"
   #gravatar = "john.doe@example.com"
 
   #favicon_32 = "images/favicon-32x32.png"

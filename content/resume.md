@@ -4,7 +4,7 @@ date: 2021-02-13T00:39:47-08:00
 draft: false
 ---
 ## About Me
-I’m a (slightly) platform-oriented DevOps Engineer, dedicated to making development and operations as painless as possible. I’ve designed pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
+I’m a (slightly) platform-oriented DevOps/Site Reliability Engineer, dedicated to making development and operations as painless as possible. I’ve designed pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
 
 ## Skills
 
