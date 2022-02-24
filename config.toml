@@ -64,6 +64,11 @@ pygmentscodefencesguesssyntax = true
   icon = "fa fa-linkedin-square fa-2x"
   weight = 2
   url = "https://www.linkedin.com/in/enny-jole/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 2
+  url = "https://twitter.com/ennyjole"  
 
 # Menu links
 [[menu.main]]
