@@ -4,8 +4,6 @@ date: 2021-02-13T00:56:39-08:00
 draft: false
 ---
 
-{{< rawhtml >}}
+If you're a recruiter and you have a position you'd think I'd be a good fit for, [please contact me here](https://forms.gle/NNoMm7YCpNLRa4LB8).
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdv7Ce2QVzfPHe5S7U7GI37j1sM-28YIpLBWJecPQOlyQtS4Q/viewform?embedded=true" width="640" height="1130" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-{{< /rawhtml >}}
+For all other inquiries, [please contact me here](https://forms.gle/WnZFHsdEkcCFcU4NA).
