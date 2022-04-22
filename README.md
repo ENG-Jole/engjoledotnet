@@ -1,6 +1,6 @@
-# ENGJOLE DOT NET
+# engjole dot net
 
-This is the repo for [my personal website](www.engjole.net).
+This is the repo for [my personal website](https://www.engjole.net).
 
 It uses [Hugo](https://gohugo.io) and GitHub actions to deploy static content to S3 when I push to it.
 
