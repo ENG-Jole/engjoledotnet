@@ -5,6 +5,8 @@ draft: false
 ---
 I am currently a Site Reliablity Eniginer on the Data Platform team at [Box](https://www.box.com), driving resiliency and pushing the boundaries of the data platform for the leader in cloud content management.
 
+Obligatory: views are my own and not my employer's.
+
 I have varied interests in tech, including: DevOps strategy, serverless automation, system design, Infrastructure as Code & Infrastructure as a (internal) Service, Linux administration, vintage Apple products, functional programming, and k8s at the edge. My favorite programming language is Rust (although I don’t consider myself a systems programmer) and I also am generally a fan of Python, Haskell, JavaScript/TypeScript, the Deno runtime, and Go. I prefer vim over emacs and zsh over bash. I’d love to get deeper with TS/Deno, Go, Rust, and Kotlin as well. My full resume and skills list can be found [here.]({{< ref "resume.md" >}})
 
 Outside of tech, I’m interested in linguistics, philosophy, specialty coffee and tea, cycling, mass transit, urban planning, art, [photography](https://https:engjolephotography.com), and food. I dearly miss Anthony Bourdain.

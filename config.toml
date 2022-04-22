@@ -22,9 +22,9 @@ pygmentscodefencesguesssyntax = true
   #favicon_32 = "images/favicon-32x32.png"
   #favicon_16 = "/img/favicon-16x16.png"
 
-  # footercontent = "Enter a text here."
-  # hideFooter = false
-  #hideCredits = false
+  footercontent = "All views expressed on this website are my own and not my employer's, unless explictly stated otherwise."
+  hideFooter = false
+  hideCredits = false
   hideCopyright = false
   since = 2021
 
