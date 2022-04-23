@@ -17,7 +17,7 @@ I haven't! I promise! It just turns out big ambitious blog series like FooBar an
 
 ## I'm Writing Fiction Again
 
-It has been literally _forever_ since I've wrote fiction in any meaningful way! And I am very happy to be doing so in a small capacity, in this case Camp NaNoWriMo as I mentioned above. If you are into ficiton writing too, let's be writing buddies! [Contact me!]({{< ref "contact.md" >}}) I may eventually throw up some stuff on a different site that I am parking the domain for but we'll see, I really haven't decided how I want to curate that presence yet.
+It has been literally _forever_ since I've wrote fiction in any meaningful way! And I am very happy to be doing so in a small capacity, in this case Camp NaNoWriMo as I mentioned above. If you are into fiction writing too, let's be writing buddies! [Contact me!]({{< ref "contact.md" >}}) I may eventually throw up some stuff on a different site that I am parking the domain for but we'll see, I really haven't decided how I want to curate that presence yet.
 
 ## I Bought A Car
 
@@ -29,8 +29,8 @@ Which is probably old news, considering I changed my resume, about page, and eve
 
 ## Upcoming Posts (Hopefully)
 
-I am definitely planning on working on a now two-parter about Python's [EAFP](https://docs.python.org/3.5/glossary.html#term-eafp) maxim, the first part about what I have been calling _bool manging_ in [Requests](https://docs.python-requests.org/en/latest/) and the second about when [LBYL](https://docs.python.org/3.5/glossary.html#term-lbyl) is good, actually. I also am planning on writing on why technical documentation is a reliability practice and make a case for embedding technical writers in engineering teams not just for user documentation, but for technical documentation, too. No promises on a timeline for these, as usual.
+I am definitely planning on working on a now two-parter about Python's [EAFP](https://docs.python.org/3.5/glossary.html#term-eafp) maxim, the first part about what I have been calling _bool mangling_ in [Requests](https://docs.python-requests.org/en/latest/) and the second about when [LBYL](https://docs.python.org/3.5/glossary.html#term-lbyl) is good, actually. I also am planning on writing on why technical documentation is a reliability practice and make a case for embedding technical writers in engineering teams not just for user documentation, but for technical documentation, too. No promises on a timeline for these, as usual.
 
-## I Am _Very_ Into Speciality Coffee Now
+## I Am _Very_ Into Specialty Coffee Now
 
 Surprising absolutely no one!

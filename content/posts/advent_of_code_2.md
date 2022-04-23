@@ -21,7 +21,7 @@ But wait, isn't that saying something snarky?
 
 This one is a bit of a doozy...
 
-Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\s][0-9]"gm```[^1], calcuate the final coordinate pair (starting from 0, 0) at the end of the list of strings, where ```forward``` means an increase in the _x_ direction and ```up``` and ```down``` mean a decrease and increase in the _y_ direction, respectively. Additionally, find the product of _x_ and _y_.
+Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\s][0-9]"gm```[^1], calculate the final coordinate pair (starting from 0, 0) at the end of the list of strings, where ```forward``` means an increase in the _x_ direction and ```up``` and ```down``` mean a decrease and increase in the _y_ direction, respectively. Additionally, find the product of _x_ and _y_.
 
 [^1]: This is so gross I hate regex sometimes.
 
@@ -58,7 +58,7 @@ def get_input_data(url: str) -> list[str]:
 {{</highlight>}}
 Hey look at that, a one-liner! Aren't I clever. I go back and forth of whether I like naming list comps something understandable before returning them or if I just want to return the comp and let the function name do the semantic work (especially when it has type annotations). This time laziness won out  ¯\\_(ツ)_/¯.
 
-This is once again a fairly straighforward problem. You just need to track the _x_ and _y_ position somehow, and have a case/match/if-else if check for each word and deconstruct each line. I could probably have done this with the new structural pattern matching syntax in Python 3.10 but I couldn't be assed that much. Again, laziness won out.
+This is once again a fairly straightforward problem. You just need to track the _x_ and _y_ position somehow, and have a case/match/if-else if check for each word and deconstruct each line. I could probably have done this with the new structural pattern matching syntax in Python 3.10 but I couldn't be assed that much. Again, laziness won out.
 {{<highlight py>}}
 def get_horizontal_and_vertical_position(command_list: list[str]) -> list[int]:
     final_position = [0, 0]
@@ -74,11 +74,11 @@ def get_horizontal_and_vertical_position(command_list: list[str]) -> list[int]:
 {{</highlight>}}
 I probably should have set _x_ and _y_ to separate variables rather than operate on list elements the whole time. It would have been a little easier to read, especially since I could just create a list at function return with those values or even just return them as a tuple or even just do the multiplication step now instead of as an f-string during final output. That said, I feel like coupling them together like this reflects their relationship better, and returning the final position just felt cleaner to me; I'd rather write a little broader code that could theoretically be reused and then further manipulate the output rather than hyperspecific code that would have to get modified for a more general use case. Yeah, this is Advent of Code and I'll probably never use this code ever again, but _writing production-like code is always a good practice_.
 
-This passed sucessfully post-element multiplication.
+This passed successfully post-element multiplication.
 
 ### The Problem, Part 2
 
-Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\s][0-9]"gm```[, calcuate the final coordinate triple (starting from 0, 0, 0) at the end of the list of strings, where ```forward n``` means an increase in the _x_ direction and an increase in the _y_ direction by _n_ * _z_ and ```up n``` and ```down n``` mean a decrease and increase in the _z_ direction, respectively. Additionally, find the product of _x_ and _y_.
+Given a list of strings of that match the (Python) regex ```"(forward|up|down)[\s][0-9]"gm```[, calculate the final coordinate triple (starting from 0, 0, 0) at the end of the list of strings, where ```forward n``` means an increase in the _x_ direction and an increase in the _y_ direction by _n_ * _z_ and ```up n``` and ```down n``` mean a decrease and increase in the _z_ direction, respectively. Additionally, find the product of _x_ and _y_.
 
 ### The Solution, Part 2
 

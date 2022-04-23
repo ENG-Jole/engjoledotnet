@@ -3,7 +3,7 @@ title: "About"
 date: 2021-02-12T23:49:48-08:00
 draft: false
 ---
-I am currently a Site Reliablity Eniginer on the Data Platform team at [Box](https://www.box.com), driving resiliency and pushing the boundaries of the data platform for the leader in cloud content management.
+I am currently a Site Reliability Engineer on the Data Platform team at [Box](https://www.box.com), driving resiliency and pushing the boundaries of the data platform for the leader in cloud content management.
 
 Obligatory: views are my own and not my employer's.
 

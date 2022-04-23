@@ -13,7 +13,7 @@ series = ["Advent of Code 2021"]
 
 ## Wait, I Thought You Didn't Like Coding Challenges
 
-I mean...I don't, really. I am definitely not into competive programming or tricky dick algorithm optimization to get that .01% less CPU usage because somehow the standard library of the language, which is often about as fast as you're going to get if there's compiler optimization going on, is somehow not fast enough. [^1] [^2] [^3]
+I mean...I don't, really. I am definitely not into competitive programming or tricky dick algorithm optimization to get that .01% less CPU usage because somehow the standard library of the language, which is often about as fast as you're going to get if there's compiler optimization going on, is somehow not fast enough. [^1] [^2] [^3]
 
 [^1]: I guess this is mainly a Python complaint since the stdlib is mainly written in C and thus will forever be faster, but I don't see people doing LeetCode in Rust or C 😉
 
@@ -21,7 +21,7 @@ I mean...I don't, really. I am definitely not into competive programming or tric
 
 [^3]: I digress
 
-But you're right, dear reader, I don't like LeetCode-style competive programming challenges. Advent of Code is definitely not that though! For one, they're all fairly short problems and don't require you to retake Data Structures and Algorithms to be good at them, and for two, they focus on _general programmatic problem solving_, the most important part of developing, rather than _hey what algorithm is this and implement it in the most optimal way possible_. This is to say: I rather like them! They're fun! They're puzzles! They scratch my itch for coding and don't require me to go on the OEIS every time! So I'm gonna (hopefully) do it this year, mmkay?
+But you're right, dear reader, I don't like LeetCode-style competitive programming challenges. Advent of Code is definitely not that though! For one, they're all fairly short problems and don't require you to retake Data Structures and Algorithms to be good at them, and for two, they focus on _general programmatic problem solving_, the most important part of developing, rather than _hey what algorithm is this and implement it in the most optimal way possible_. This is to say: I rather like them! They're fun! They're puzzles! They scratch my itch for coding and don't require me to go on the OEIS every time! So I'm gonna (hopefully) do it this year, mmkay?
 
 ## Day 1 Spoilers
 
@@ -57,7 +57,7 @@ def get_num_of_larger_measurements(measurements: list[int]) -> int:
 
     return larger_measurements
 {{</highlight>}}
-I was then just cumatively adding each greater than 0 difference to the psuedo-counter I set up. Worked out ok. I probably could have instead used some itertools trickery for the lookahead but I think this is generally more readable...and it's not like performance really matters! This passed sucessfully and....
+I was then just cumulatively adding each greater than 0 difference to the pseudo-counter I set up. Worked out ok. I probably could have instead used some itertools trickery for the lookahead but I think this is generally more readable...and it's not like performance really matters! This passed successfully and....
 
 ### Wait, There's a Part 2????
 
@@ -90,7 +90,7 @@ def get_sliding_scale_num_of_larger_measurements(measurements: list[int]) -> int
     larger_measurements = get_num_of_larger_measurements(sums)
     return larger_measurements
 {{</highlight>}}
-And again, this passed sucessfully.
+And again, this passed successfully.
 
 ## Conclusion
 

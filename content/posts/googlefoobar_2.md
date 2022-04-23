@@ -38,7 +38,7 @@ But, since SWNs are concatenated primes, their rate of growth is effected by the
 
 ## Creating an Algorithm for the Length of a Smarandache-Wellin Number
 
-First, I ended up creating a specific version of a SWN length algorithm using the aformentioned _number of primes < m_ sequence as bounds for a piecewise function:
+First, I ended up creating a specific version of a SWN length algorithm using the aforementioned _number of primes < m_ sequence as bounds for a piecewise function:
 {{<highlight py>}}
 # For the nth SWN, return the total number of digits
 def swn_length(n):
@@ -80,7 +80,7 @@ def swn_length_iterative(n):
 
     return length
 {{</highlight>}}
-Much easier to see what's acutally going on here, and seems less arbitrary than a bunch of if thans and numbers. However, on comparing these two algorithms, since the latter was a for loop, and Python sucks sometimes, I realized my fancy generalized algo was 23 times slower than the hardcoded one, so hardcoded won out. Plus, it made it a lot easier to make a specific algo to get the _nth_ prime from the length:
+Much easier to see what's acutally going on here, and seems less arbitrary than a bunch of if than's and numbers. However, on comparing these two algorithms, since the latter was a for loop, and Python sucks sometimes, I realized my fancy generalized algo was 23 times slower than the hardcoded one, so hardcoded won out. Plus, it made it a lot easier to make a specific algo to get the _nth_ prime from the length:
 {{<highlight py>}}
 def check_length(length):
     if length == 0:
@@ -112,7 +112,7 @@ def nth_from_index(string_index):
         prime_start = poss_n
         init_position = 0
     else:
-        spread = get_neccessary_prime_amount(poss_n)
+        spread = get_necessary_prime_amount(poss_n)
         delta = int(ceil(spread / 2.0))
         lower_bound = poss_n - delta
         upper_bound = poss_n + delta + 1
