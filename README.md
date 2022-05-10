@@ -1,4 +1,5 @@
 # engjole dot net
+![S3/CloudFront Deploy](https://github.com/ENG-Jole/engjoledotnet/actions/workflows/build-deploy.yml/badge.svg)
 
 This is the repo for [my personal website](https://www.engjole.net).
 
