@@ -1,4 +1,4 @@
-name:                    S3/CloudFront CI
+name:                    S3/CloudFront CI/CD
 
 on:
   push:
@@ -9,7 +9,9 @@ on:
 jobs:
   build:
     runs-on:             ubuntu-latest
-
+    environment:        
+      name: s3-cloudfront
+      url:  https://engjole.net
     steps:
       - uses:            actions/checkout@v2
         with:
