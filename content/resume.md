@@ -3,16 +3,16 @@ title: "Resume"
 date: 2021-02-13T00:39:47-08:00
 draft: false
 ---
-## About Me
-I’m a (slightly) platform-oriented DevOps/Site Reliability Engineer, dedicated to making development and operations as painless as possible. I’ve designed pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
+## tl;dr
+I’m a platform-oriented Site Reliability Engineer, dedicated to making development and operations as painless as possible. I’ve designed pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
 
 ## Skills
 
-PostgresSQL, MySQL, MongoDB, some Neo4j; Python; shell scripting; Linux (several flavors); IaC (Ansible, Terraform, CloudFormation); Docker; k8s; SDLC; Agile methodology (kanban, scrum); technical writing & communication; git; RESTful APIs; Infrastructure and app performance monitoring & logging (Nagios, New Relic, Datadog); AWS ECS, EBS, EC2, S3, RDS/AuroraDB, CloudWatch, etc; process re-engineering; networking; web servers and proxies (Apache, WSGI, Nginx, Traefik), CI/CD (Drone CI, CodeBuild, TeamCity, etc); and probably several other things I forgot to mention.
+PostgreSQL, MySQL, MongoDB, some Neo4j; Python; shell scripting; Linux (several flavors); IaC (Ansible, Terraform, CloudFormation, Puppet (🙃)); Docker; k8s; SDLC; Agile methodology; technical writing & communication; git; RESTful APIs; Infrastructure and app performance monitoring & logging (Nagios, New Relic, Datadog, etc); AWS, GCP; process re-engineering; automation; Kafka; ES; web servers and proxies (Apache, WSGI, Nginx, Traefik, etc), CI/CD (Drone CI, CodeBuild, TeamCity, Jenkins, etc); and probably several other things I forgot to mention.
 
 ## Experience
 
-As I mentioned in my about, I am currently a Site Reliability Engineer on the Data Platform team at Box, part of a team leading the effort in building and scaling the technical foundations that allow Box to empower business critical services like Box Shield, Enterprise Reporting and Business Analytics. 
+As I mentioned in my about, I am currently a Site Reliability Engineer on the Data Transformation Reliability Engineering team at Box, part of a team leading the effort in 10x the infrastructure platform that allows Box to empower business critical services like Box Shield, Enterprise Reporting and Business Analytics. 
 
 Before Box, I was a DevOps Engineer at Jama Software, the leader in requirements management software, from Dec 2020 to the tail end of Feb 2022, part of an Agile team committed to code ownership from development through deployment, acting as ambassadors of holistic DevOps to the company. There, I designed & built microservice-based infrastructure automation service for internal customers, increasing team's clock speed and maintainability of internal tools; further automated release process, resulting in a >75% reduction of team's manual release labor; led cross-team tooling research and evaluation for Kubernetes migration; was a key contributor to the design and implementation of a new CI/CD pipeline, and was one of many hands involved in our move to Kubernetes, on premise, in the cloud, and as a dev environment, amongst many other things. I left to work at Box.
  
