@@ -5,8 +5,8 @@ title = "First"
 description = "First blog post"
 slug = "Moving to Hugo in Docker"
 authors = ["Enny Jole"]
-tags = ["meta"]
-categories = ["meta", "blog"]
+tags = ["meta", "hugo"]
+categories = ["meta", "blog", "hugo"]
 externalLink = ""
 series = []
 +++

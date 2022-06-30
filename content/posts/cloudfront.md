@@ -5,8 +5,8 @@ title = "I Once Again Moved My Website"
 description = "Going fast and smooth"
 slug = "Moving to Hugo on S3"
 authors = ["Enny Jole"]
-tags = ["meta"]
-categories = ["meta", "blog"]
+tags = ["meta", "hugo"]
+categories = ["meta", "blog", "hugo"]
 externalLink = ""
 series = []
 +++
