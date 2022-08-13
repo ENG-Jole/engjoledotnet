@@ -3,11 +3,14 @@ title: "About"
 date: 2021-02-12T23:49:48-08:00
 draft: false
 ---
+## About Me
+Hi hi. I'm an SRE at Box. You can call me EJ.
+
 ## About This Blog
 
 This is (mainly) (kinda sorta) a tech blog. I mostly write about Python, how much I hate coding challenges but do them anyway for Fun™, and various other musings about tech with random life updates thrown in sometimes. No regular cadence, no regular theme, just whatever I feel like writing!
 
-## About Me
+## (Actually) About Me
 
 I am currently a Site Reliability Engineer on the Data Transformation Reliability Engineering team at [Box](https://www.box.com), driving observability and reliability for data transformation infrastructure.
 

@@ -1,6 +1,6 @@
 baseurl = "http://www.engjole.net"
 title = "Enny Jole"
-theme = ["github.com/luizdepra/hugo-coder"]
+theme = ["github.com/gcc42/hugo-redirect", "github.com/luizdepra/hugo-coder"]
 languagecode = "en"
 defaultcontentlanguage = "en"
 
