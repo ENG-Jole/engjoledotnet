@@ -68,7 +68,13 @@ pygmentscodefencesguesssyntax = true
   name = "Twitter"
   icon = "fa fa-twitter fa-2x"
   weight = 2
-  url = "https://twitter.com/ennyjole"  
+  url = "https://twitter.com/ennyjole"
+[[params.social]]
+  name = "FediVerse"
+  icon = "fa fa-mastodon fa-2x"
+  weight = 2
+  url = "https://tech.lgbt/@ej"
+  rel = "me"
 
 # Menu links
 [[menu.main]]
