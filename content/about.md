@@ -12,11 +12,13 @@ This is (mainly) (kinda sorta) a tech blog. I mostly write about Python, how muc
 
 ## (Actually) About Me
 
-I am currently a Site Reliability Engineer on the Data Transformation Reliability Engineering team at [Box](https://www.box.com), driving observability and reliability for data transformation infrastructure.
+I was most recently a Site Reliability Engineer at [Box](https://www.box.com).
 
 Obligatory: views are my own and not my employer's.
 
-I have varied interests in tech, including: DevOps/SRE strategy, serverless automation, system design, Infrastructure as Code & Infrastructure as a (internal) Service, Linux administration, vintage Apple products, functional programming, and k8s at the edge. My favorite programming language is Rust (although I don’t consider myself a systems programmer) and I also am generally a fan of Python, Haskell, Deno, and Go. I prefer vim over emacs and zsh over bash. I’d love to get deeper with TS/Deno, Go, Rust, and Kotlin as well. You can see my full resume [here]({{< ref "resume.md" >}} "Resume")
+I’m a platform-oriented, software-oriented Site Reliability Engineer, dedicated to making development and operations as painless as possible. I’ve designed CI/CD pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
+
+My favorite programming language is Python and I also am generally a fan of Rust, Haskell, JavaScript/TypeScript, SvelteKit, and Go. I prefer vim over emacs and zsh over bash. In general I have varied interests in tech, including: DevOps/SRE strategy, serverless automation, system design, Infrastructure as Code & Infrastructure as a (internal) Service, Linux administration, vintage Apple products, functional programming, and k8s at the edge. You can see my full resume [here]({{< ref "resume.md" >}} "Resume")
 
 I also contribute to the [Hunge Labs](https://github.com/hungelabs) project, an nascent open-source specialty coffee knowledgebase. As one might figure out I am deep into specialty coffee.
 
