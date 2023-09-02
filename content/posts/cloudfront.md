@@ -22,6 +22,7 @@ I ran a ping test against the old Docker server and the CloudFront distro while 
 
 New:
 {{<highlight bash>}}
+<!-- markdownlint-disable-next-line -->
     ❯ ping -c 5 www.engjole.net
     PING doi5jqyokxnhv.cloudfront.net (54.192.73.49): 56 data bytes
     64 bytes from 54.192.73.49: icmp_seq=0 ttl=245 time=3.281 ms

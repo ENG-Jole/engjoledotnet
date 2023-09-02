@@ -47,12 +47,16 @@ def swn_length(n):
     elif 0 < n <= 4:
         length = n
     elif 4 < n <= 25:
+    <!-- markdownlint-disable-next-line -->
         length = 4 + 2 * (n - 4)
     elif 25 < n <= 168:
+    <!-- markdownlint-disable-next-line -->
         length = 46 + 3 * (n - 25)
     elif 168 < n <= 1229:
+    <!-- markdownlint-disable-next-line -->
         length = 475 + 4 * (n - 168)
     elif 1229 < n <= 9592:
+    <!-- markdownlint-disable-next-line -->
         length = 4719 + 5 * (n - 1229)
     else:
         raise ValueError
@@ -104,7 +108,7 @@ I did something similar to my optimized SWN algo to get the length of individual
 
 Something I noticed about my nth-as-a-function-of-length algo is that when I was passing indexes to it, not all indexes would return an integer value of _n_ when using a real calculator! Thanks Python floats and computer division! You obviously can't have the 2.5th prime, so I need to find some way to deal with that, since I was just going to pass raw index values to it, and somehow remember where the index was in relation to the valid length of the calculated _nth_ SWN.
 
-I implemented a function to turn the index into a _possible nth prime_ value, checked to see if it was a valid _nth_ prime, and checked the delta from there. I ended up using a function I had written earlier to get the necessary amount of primes to get five digits after any index of the _nth_ prime to create a spread of _n_ values for possible candidates if the possible prime wasn't valid, and used a bisect-based comparison function to get the closest valid _n_ value. I then subtracted the raw string index value from SWN length of the closest _n_ value to get a delta from which I could base the five digits off of. This code ended up being a pain in the ass to get working properly; between certain lengths there was drift of one or two places as compared to the brute force result and I ended up calculating the length of the _nth_ prime and adding that value minus one to the delta to compensate for this drift. Here's what the final code looked like:  
+I implemented a function to turn the index into a _possible nth prime_ value, checked to see if it was a valid _nth_ prime, and checked the delta from there. I ended up using a function I had written earlier to get the necessary amount of primes to get five digits after any index of the _nth_ prime to create a spread of _n_ values for possible candidates if the possible prime wasn't valid, and used a bisect-based comparison function to get the closest valid _n_ value. I then subtracted the raw string index value from SWN length of the closest _n_ value to get a delta from which I could base the five digits off of. This code ended up being a pain in the ass to get working properly; between certain lengths there was drift of one or two places as compared to the brute force result and I ended up calculating the length of the _nth_ prime and adding that value minus one to the delta to compensate for this drift. Here's what the final code looked like:
 {{<highlight py>}}
 def nth_from_index(string_index):
     poss_n = check_length(string_index)

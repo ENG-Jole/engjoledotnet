@@ -12,7 +12,7 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   author = "Enny Jole"
-  info = "SRE, Data Transformation @ Box | she/her"
+  info = "SRE, Super Radical Engineer | she/her"
   description = "Enny Jole's personal website"
   GitHubUser = "ENG-Jole"
   keywords = "blog,developer,personal"
@@ -46,7 +46,7 @@ pygmentscodefencesguesssyntax = true
     lineNumbersInTable = true
     noClasses = true
     style = 'dracula'
-    tabWidth = 4  
+    tabWidth = 4
 [taxonomies]
   category = "categories"
   series = "series"

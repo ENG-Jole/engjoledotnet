@@ -3,3 +3,5 @@
 .env
 .hugo_build.lock
 /resources/_gen/assets
+/.vscode
+/.vscode/*

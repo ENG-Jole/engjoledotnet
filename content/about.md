@@ -4,7 +4,7 @@ date: 2021-02-12T23:49:48-08:00
 draft: false
 ---
 ## About Me
-Hi hi. I'm an SRE at Box. You can call me EJ.
+Hi hi. I'm an SRE, most recently at Box. You can call me EJ.
 
 ## About This Blog
 

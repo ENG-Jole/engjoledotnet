@@ -36,6 +36,7 @@ So ok, I'm lying slightly about the problem... you're not actually given a list 
 Given a webpage? Easy! Install requests, grab that url, put the session ID in my environment, grab that from the environment, pass it as a dict to requests.get, convert the results to a string, split that string, and list comp it so it's actually ints! Yay!
 {{<highlight py>}}
 SESSION_ID = os.environ["AOC_2021_SESSION"]
+<!-- markdownlint-disable-next-line -->
 URL = "https://adventofcode.com/2021/day/1/input"
 
 def url_to_list_of_ints(url: str) -> list[int]:
@@ -67,13 +68,13 @@ Given a list of ints, get the number of times the nth + 1 sum of the three item 
 
 Well, despite being a little confusingly worded, this one isn't that bad at all. Looking at the example shows it a little better:
 {{<highlight text>}}
-199  A      
-200  A B    
-208  A B C  
+199  A
+200  A B
+208  A B C
 210    B C D
 200  E   C D
 207  E F   D
-240  E F G  
+240  E F G
 269    F G H
 260      G H
 263        H
