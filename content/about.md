@@ -16,7 +16,7 @@ I was most recently a Site Reliability Engineer at [Box](https://www.box.com).
 
 Obligatory: views are my own and not my employer's.
 
-I’m a platform-oriented, software-oriented Site Reliability Engineer, dedicated to making development and operations as painless as possible. I’ve designed CI/CD pipelines, wrangled k8s, turned fragile automation into scalable services, and believe that empathy and moral decision making are key engineering skills.
+I'm a highly adaptable and versatile site reliability engineer with a wide variety of experiences across technical environments, dedicated to making development and operations as painless as possible. I have both a strong systems and software engineering background, having designed CI/CD pipelines, wrangled Kubernetes clusters, ran multiple 100+ node distributed computing clusters, and turned fragile, opaque, automation into scalable, resilient, transparent, services throughout my career. I'm a whole-systems thinker, believe that reliability is everyone's responsibility, and know that empathy and moral decision making are key engineering skills.
 
 My favorite programming language is Python and I also am generally a fan of Rust, Haskell, JavaScript/TypeScript, SvelteKit, and Go. I prefer vim over emacs and zsh over bash. In general I have varied interests in tech, including: DevOps/SRE strategy, serverless automation, system design, Infrastructure as Code & Infrastructure as a (internal) Service, Linux administration, vintage Apple products, functional programming, and k8s at the edge. You can see my full resume [here]({{< ref "resume.md" >}} "Resume")
 
