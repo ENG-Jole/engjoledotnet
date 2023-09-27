@@ -5,3 +5,5 @@
 /resources/_gen/assets
 /.vscode
 /.vscode/*
+/.frontmatter
+/.frontmatter/*

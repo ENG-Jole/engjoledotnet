@@ -3,23 +3,65 @@ title: "Resume"
 date: 2021-02-13T00:39:47-08:00
 draft: false
 ---
-## tl;dr
-I'm a highly adaptable and versatile site reliability engineer with a wide variety of experiences across technical environments, dedicated to making development and operations as painless as possible. I have both a strong systems and software engineering background, having designed CI/CD pipelines, wrangled Kubernetes clusters, ran multiple 100+ node distributed computing clusters, and turned fragile, opaque, automation into scalable, resilient, transparent, services throughout my career. I'm a whole-systems thinker, believe that reliability is everyone's responsibility, and know that empathy and moral decision making are key engineering skills.
-
+## Summary
+I'm a highly adaptable and versatile engineer who has constantly grown in scope, impact, and performance. I have wide variety of experiences across technical environments and a strong systems and software engineering background. I have designed CI/CD pipelines, wrangled Kubernetes clusters, ran multiple 100+ node distributed computing clusters, and turned fragile, opaque, automation into scalable, resilient, transparent, services throughout my career. I'm a whole-systems thinker and believe that reliability is everyone's responsibility.
 ## Experience
 
-As I mentioned in my about, I was most recently a Site Reliability Engineer at Box, from February 2022 to September 2023. Some high-level highlights of my time there was creating and piloting formalized engagement contracts between tenants and platform owners for two different teams (resulting in a ~50%-~30% reduction in tenant-generated operational work and a ~35%-~55% reduction in time to resolution for said work), being the engineering lead & project manager for the evaluation of & migration to Temporal Cloud from self-managed Temporal, and being the architect & project lead for a custom Box-integrated runbook automation platform, designed to reduce mean time to diagnosis by providing a system of diagnostic checks defined in a YAML or JSON workflow spec that centralized multiple sources of service health data (such as metrics, distributed traces, logs, cloud provider service status, & Kubernetes workload status) into a single pane of diagnostic glass, implemented in Go with UI prototypes in TypeScript and SvelteKit, backed by GCP CloudSQL and PubSub, instrumented with Prometheus, and running on GKE.
+### Site Reliability Engineer @ [Box](https://www.box.com), February 2022 to September 2023
 
-Before Box, I was a DevOps Engineer at Jama Software, the leader in requirements management software, from Dec 2020 to the tail end of Feb 2022, part of an Agile team committed to code ownership from development through deployment, acting as ambassadors of holistic DevOps to the company. There, I designed & built microservice-based infrastructure automation service for internal customers, increasing team's clock speed and maintainability of internal tools; further automated release process, resulting in a >75% reduction of team's manual release labor; led cross-team tooling research and evaluation for Kubernetes migration; was a key contributor to the design and implementation of a new CI/CD pipeline, and was one of many hands involved in our move to Kubernetes, on premise, in the cloud, and as a dev environment, amongst many other things. I left to work at Box.
+At Box, I was a high-performing engineer lauded for versatility, friendliness, and productivity. I owned multiple 100+ node Apache Kafka & ElasticSearch clusters and other data transformation infrastructure, supported the company-wide observability pipeline, and broadly supported all services as part of company-wide SRE team, at various points.
 
-I was formerly the lead (and sole!) DevOps & support engineer and system administrator for [ChamberDS](http://www.chamberds.com) in Portland, OR, from Feb 2020 to Dec 2020, a SaaS mobile app incubator driven to empower clients to truly add value and make an impact in someone else's life. I was building out the infrastructure and support side of the business, automating, architecting, rearchitecting, and implementing a wide range of solutions. Specifically, I have was the infrastructure architect for a new client, building out a highly scalable, continuously integrated, enterprise-grade architecture to serve both web and mobile clients, with an autoscaling API cluster; automating existing support solutions for all of our current clients to greatly reduce MTTR and increase client communication; and re-architecting existing infrastructure to better meet an world-class, enterprise standard, in addition to the day-to-day support and infrastructure operations of the company. I left to work at Jama.
+Some key accomplishments:
 
-From Jan 2019 to Jun 2019 I was an Associate Support Engineer at [Chrome River Technologies](https://www.chromeriver.com) in Los Angeles, CA, an accounts payable SaaS company valued at over $1 billion (a unicorn). At Chrome River, I first supported higher-education clients using the EXPENSE product, and enabled excellent customer experience by applying end-to-end product knowledge to customer solutions. I was the SME for mobile apps and email flows. Later I was selected for movement to INVOICE product, a high case-load, more specialized area, where I was once again the SME for emails. During my time at Chrome River I reduced churn by 10% for higher education clients by meeting with them once per investigatory case to keep them informed of outcomes and ask directly for their feedback about what my team could be doing,  automated email batch troubleshooting via SQL to reduce MTTR by 50% for 15% of batch cases, increased team effectiveness and cohesiveness via interteam leadership, and was a month-to-month leader in customer satisfaction surveys. I was laid off, along with ~15% of other employees, from Chrome River due to a reduction in force directed by new ownership.
+- saving $2 million in operational costs over 4 years as engineering lead and project manager for on-time migration to Temporal Cloud from self-managed Temporal.
+- saving ~1.25 FTE equivalent of effort annually by reducing time to resolution and overall tenant request volume for two different teams with the implementation of a formalized engagement contract, runbook automation in Bash and Python, and a new on-call process between service owners and tenants,
+- saving ~140 hours of effort annually across the company by reducing mean time to diagnosis by architecting and building custom Box-integration diagnostic automation platform using Go, MySQL on CloudSQL, GCP PubSub, Redis, Prometheus, and TypeScript/SvelteKit on GKE,
+- saving a reduction of ~150 hours of effort annually as measured by incident response time as co-lead for on-time migration ~30% of tenants off on-premise data access platform onto managed CloudSQL,
+- building out smoke testing & database migration automation using Python running on GKE, wrote CloudSQL Auth Proxy Kubernetes sidecar, and enforced compliance with Box’s security policies for said CloudSQL migration,
+- achieving a ~50% reduction in topic creation time and ~15% reduction in overall tenant requests for team with self-service Apache Kafka topic creation automation using Jenkins, Python, and Terragrunt,
+- reducing downtime by 75% during migration of Sensu Go monitoring platform from on-premise to GCP by building out monitoring & alerting strategy and Etcd cluster,
+- consulting on Python best practices for and collaborating on the implementation on a custom analytics API for the Core Data platform.
+- I organized & facilitated team building summit for entire department and team building social hour for two different teams.
+- I mentored the team's junior engineer.
+- I was recognized at the org level by management as the most productive engineer for the quarter.
 
-From May 2018 to Jan 2019, and from Aug 2019 to Dec 2019 I was a freelance Solutions Specialist, working first in the Los Angeles, CA area and later in Portland, OR. I served small-and-medium business clients, and clients adjacent to academia, meeting their needs in UNIX-like issues. I wound down to work first at Chrome River, and then at ChamberDS.
+### DevOps Engineer @ [Jama Software](https://www.jamasoftware.com), December 2020 to February 2022
 
-From Aug 2016 to May 2018 I was a Technical Support Analyst, Lead, at Occidental College Information Technology Services in Los Angeles, CA. I was the team lead & technical support analyst, and partial systems administrator for day-to-day operations of a 3000+ user higher education environment, providing front-line and deep technical support to foster both the fulfillment of individual aspirations and a deeply rooted commitment to the public good. I architected a digital signage server cluster to enhance community CX; increased institutional knowledge by providing training, guidance, mentorship and documentation for macOS and Linux desktop support to coworkers and supervisors; consulted on support best practices and pain points to decrease MTTR and increase support effectiveness; decreased MTTR by 25% via bash & python automation; and provided world class, VIP support for the Office of the Dean of the College.
+I was a key player of developer productivity-oriented Agile team responsible for CI/CD, code quality, artifact storage, development, staging, and DR environments, customer datacenter deployment orchestration, and Kubernetes migration, amongst other things. I frequently partnered and collaborated with the SRE team and was promoted in less than 6 months.
 
+Some highlights from my time at Jama include:
+
+- saving ~$1 million in cloud computing costs annually with autoscaling service built with Python, JavaScript, Node.js, React.js, MongoDB, Redis, & EKS,
+- saving ~5 days of effort annually by automating manual release process using Python, Bash, and TeamCity,
+- gaining the company ~910 hours of effort annually by decreasing artifact build time with redesigned image inheritance strategy,
+- creating the design for a combined AWS CodeBuild/TeamCity CI/CD pipeline, and trialed GitHub Actions, CircleCI, DroneCI, amongst other solutions, as engineering lead for design of a new CI/CD pipeline,
+- leading the POC for tooling for the company's Kubernetes migration, trialing CD, local development environment environment, and deployment manifest solutions such as ArgoCD, FluxCD, k3d, minikube, Helm, and cdk8s,
+- mentoring the team's junior engineer, who is still a close friend,
+- organizing and facilitating a team-building bicycling trip,
+- and co-founding the company's LGBTQ ERG, and brought in a professional linguist as a guest speaker.
+
+### DevOps Engineer @ ChamberDS, February 2020 to December 2020
+
+I was the first infrastructure engineer for mobile-first app development consultancy and incubator, and acted as a systems architect, cloud engineer, security engineer, and FinOps engineer. Many hats, many hats!
+
+Some greatest hits from my time there:
+
+- Accomplished ~310 hour reduction in annual total mean time to resolution by documenting incident response processes and writing automation in Python, Node.js, and Bash
+- Achieved ~15% average reduction in cloud computing costs per client by proper capacity planning, implementation of autoscaling, and re-engineering of workloads
+- Gained ~75 hours of uptime annually on average per client by implementing architectural and monitoring best practices across the company
+- Realized a 50% reduction in infrastructure provisioning time with implementation of Terraform and Ansible, greatly increasing developer clock speed
+- and performed monthly security & dependency audits, and implemented & tested security fixes for services.
+
+### Support Engineer @ [Chrome River Technologies](https://www.chromeriver.com), Janurary 2019 - June 2019
+
+I was a highly-technical support engineer for a large enterprise financial software company, providing subject-matter expertise on the mobile application and email flows for two different products. I saved the company ~1800 work hours a year by automating email batch troubleshooting with SQL and was month-to-month leader in customer satisfaction surveys.
+
+### Freelance Systems Administrator, May 2018 - Decemeber 2019 & June 2019 - February 2020
+I ran websites & storage networks, automated complex tasks with Python & AppleScript, configured and installed networks, and set up device management, amongst other things, for a variety of small-medium business clients.
+
+### Lead Technical Support Analyst @ Occidental College, August 2016 - May 2018
+
+I was a technical support analyst, and part-time systems administrator for day-to-day operations of a higher education environment. I Became team lead within the first month. I achieved a 25% average reduction in time to resolution for various macOS/Linux related manual tasks by automating them with Python & Bash, provided training on macOS/Linux troubleshooting, and redesigned & reimplemented the campus digital signage system.
 ## Skills
 
 - __Programming/Scripting Languages:__ Python (FastAPI, Flask, Celery, etc.), Go (Echo, Watermill, GORM, etc.), JavaScript/TypeScript (Node.js, Deno, SvelteKit, React.js, etc.), Bash, HTML, CSS, SQL, some Rust (PyO3), some Java, some Groovy
@@ -32,28 +74,26 @@ From Aug 2016 to May 2018 I was a Technical Support Analyst, Lead, at Occidental
 
 - __Infrastructure as Code:__ Terraform, Terragrunt, CDKTF, Pulumi, Ansible, AWS CloudFormation
 
-- __Configuration as Code:__ Packer, Puppet, Ansible, cdk8s, Helm
+- __Configuration Management:__ Packer, Puppet, Ansible
 
 - __Container Orchestration:__ Docker, ECS, Kubernetes, GKE, EKS, k3s, Istio, Traefik, cdk8s, Helm, Kustomize
 
 - __CI/CD:__ Drone CI, AWS CodeBuild, TeamCity, Jenkins, GitHub Actions, FluxCD, etc.
 
-- __Version Control:__ Git, GitHub
+- __Version Control & Artifact Management:__ Git, GitHub, AWS ECR, GCP Artifact Registry, JFrog Artifactory
 
 - __REST APIs:__ Design & implementation, OpenAPI/Swagger, Swagger UI, Swagger/OpenAPI Codegen
 
 - __Observability, Monitoring, & Logging:__ Splunk, Wavefront, Sensu Go, Prometheus, Datadog, New Relic, AWS CloudWatch, etc.
 
-- __AWS__: ECS, EC2, ELB, S3, RDS, AuroraDB, EKS, CloudWatch, CloudFront, CodeBuild, etc.
-
-- __GCP__: GKE, GCE, GCS, Cloud Load Balancing, CloudSQL, PubSub, BigTable, BigQuery, Dataproc, Dataflow, etc.
+- __Cloud Computing:__ AWS (ECS, EC2, ELB, S3, RDS, AuroraDB, EKS, CloudWatch, CloudFront, CodeBuild, etc.), GCP (GKE, GCE, GCS, Cloud Load Balancing, CloudSQL, PubSub, BigTable, BigQuery, Dataproc, Dataflow, etc.)
 
 - __Workflow Orchestration:__ Temporal, Apache Airflow
 
-- __Web Servers:__ Nginx, Apache, HAProxy
+- __Web Servers:__ Nginx, Apache, HAProxy, Apache Tomcat
 
-- __Other:__ SDLC, Process re-engineering, SRE/DevOps strategy, Agile (kanban, scrum, Jira).
+- __Other:__ SDLC, Process re-engineering, SRE/DevOps strategy, Agile (kanban, scrum, Jira)
 
 ## Education
 
-I have an A.B. (_artium baccalaureus_, Bachelor's degree) in Philosophy from Occidental College, in Los Angeles, CA. I worked mainly in philosophy of language, semantics, metaphilosophy, formal logic, and moral psychology. This strong background in rigorous analytical thinking, combined with Computer Science coursework (Oxy only recently created a CompSci major) and my own technical background helped me succeed as a software engineer.
+I have a Bachelor's degree from Occidental College.
