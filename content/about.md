@@ -4,7 +4,7 @@ date: 2021-02-12T23:49:48-08:00
 draft: false
 ---
 ## About Me
-Hi hi. I'm an SRE, most recently at Box. You can call me EJ.
+Hi hi. I'm an SRE, currently at [ConductorOne](https://conductorone.com). I used to work at [Box](https://www.box.com). You can call me EJ.
 
 ## About This Blog
 
@@ -14,7 +14,7 @@ Also: hi if you're a recruiter and I applied to your company! It's nice to see p
 
 ## (Actually) About Me
 
-I was most recently a Site Reliability Engineer at [Box](https://www.box.com).
+I am currently a Senior Software Engineer - Reliability (or Sr. SRE) at [ConductorOne](https://conductorone.com).
 
 Obligatory: views are my own and not my employer's.
 

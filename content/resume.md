@@ -7,6 +7,8 @@ draft: false
 I'm a highly adaptable and versatile engineer who has constantly grown in scope, impact, and performance. I have wide variety of experiences across technical environments and a strong systems and software engineering background. I have designed CI/CD pipelines, wrangled Kubernetes clusters, ran multiple 100+ node distributed computing clusters, and turned fragile, opaque, automation into scalable, resilient, transparent, services throughout my career. I'm a whole-systems thinker and believe that reliability is everyone's responsibility.
 ## Experience
 
+### Senior Software Engineer - Reliability @ [ConductorOne](https://www.conductorone.com), November 2023 - present
+
 ### Site Reliability Engineer @ [Box](https://www.box.com), February 2022 to September 2023
 
 At Box, I was a high-performing engineer lauded for versatility, friendliness, and productivity. I owned multiple 100+ node Apache Kafka & ElasticSearch clusters and other data transformation infrastructure, supported the company-wide observability pipeline, and broadly supported all services as part of company-wide SRE team, at various points.
@@ -61,7 +63,7 @@ I ran websites & storage networks, automated complex tasks with Python & AppleSc
 
 ### Lead Technical Support Analyst @ Occidental College, August 2016 - May 2018
 
-I was a technical support analyst, and part-time systems administrator for day-to-day operations of a higher education environment. I Became team lead within the first month. I achieved a 25% average reduction in time to resolution for various macOS/Linux related manual tasks by automating them with Python & Bash, provided training on macOS/Linux troubleshooting, and redesigned & reimplemented the campus digital signage system.
+I was a technical support analyst, and part-time systems administrator for day-to-day operations of a higher education environment. I became team lead within the first month. I achieved a 25% average reduction in time to resolution for various macOS/Linux related manual tasks by automating them with Python & Bash, provided training on macOS/Linux troubleshooting, and redesigned & reimplemented the campus digital signage system.
 ## Skills
 
 - __Programming/Scripting Languages:__ Python (FastAPI, Flask, Celery, etc.), Go (Echo, Watermill, GORM, etc.), JavaScript/TypeScript (Node.js, Deno, SvelteKit, React.js, etc.), Bash, HTML, CSS, SQL, some Rust (PyO3), some Java, some Groovy
